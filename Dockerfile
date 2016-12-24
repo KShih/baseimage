@@ -1,6 +1,6 @@
 FROM phusion/baseimage
 
-MAINTAINER DuckLL <kontonsine@gmail.com>
+MAINTAINER KShih <kontonsine@gmail.com>
 
 ENV TERM screen-256color
 ENV LC_ALL en_US.UTF-8
