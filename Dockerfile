@@ -23,11 +23,15 @@ RUN add-apt-repository --yes ppa:neovim-ppa/unstable \
    git \
    vim \
    wget \
+   tmux \
+   net-tools \
 && apt-fast clean
 
 # dotfiles
 RUN git clone https://github.com/KShih/dotfile.git --depth 1 ~/dotfile \
-&& cp ~/dotfile/.vimrc ~/.vimrc
+&& cp ~/dotfile/.vimrc ~/.vimrc \
+&& cp ~/dotfile/.tmux.conf ~/.tmux.conf
+
 
 # vim plugin
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
